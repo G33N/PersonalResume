@@ -1,0 +1,24 @@
+{
+  "CARD": {
+    "NAME": "Celiz Morante Matias Nahuel",
+    "TITLE": "Desarrollador JS Full Stack",
+    "EMAIL": "mceliz@enlaceit.com.ar",
+    "PHONE": "+549299739666",
+    "SKYPE": "enlace.it",
+    "ADDRESS": "Jose Ingenieros 1440, Neuquen, Argentina",
+    "GITHUB": "https://github.com/G33N",
+    "LINKEDIN": "https://www.linkedin.com/in/matias-nahuel-celiz-morante-994719149/"
+  },
+  "EXPERIENCE": {
+    "TITLE": "Experiencia"
+  },
+  "EDUCATION": {
+    "TITLE": "Educacion"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portafolio"
+  },
+  "FOOTER": {
+
+  }
+}

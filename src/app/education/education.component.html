@@ -1,0 +1,16 @@
+<section id="education" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>{{ 'EDUCATION.TITLE' | translate }}</h2>
+        <ul>
+          <li *ngFor="let item of items" class="card card-body portfolio-car"> <i class="fa fa-university fa-3 "> {{item.start}} - {{item.end}} </i>
+            <h6>{{item.institution}}</h6>
+            <p>{{item.title }}</p>
+
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

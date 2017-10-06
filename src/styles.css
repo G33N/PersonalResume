@@ -1,1 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+@import url('https://fonts.googleapis.com/css?family=Patua+One|Rokkitt');
+
+.mdi-ul, ul, ul li {
+  list-style-type: none;
+}
+
+section {
+  padding: 5em;
+}
+
+p, select, a {
+  font-family: 'Rokkitt', serif;
+}
+
+h2, h4, h6 {
+  font-family: 'Patua One', cursive;
+}
+
+ul li a {
+  color: #FFF;
+  font-family: 'Patua One', cursive;
+}
+
+img {
+  vertical-align: middle;
+}
+
+.right {
+  float:right;
+}
+
+/* Shadows */
+div .portfolio-car{
+  -webkit-box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+}

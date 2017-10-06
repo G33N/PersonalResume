@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card card-cascade wider reverse my-4">
+        <div class="view overlay hm-white-slight">
+          <img src="https://firebasestorage.googleapis.com/v0/b/personalresume-fdcb6.appspot.com/o/DSC_0356.JPG?alt=media&token=d48a1318-9b4e-4001-afe2-a409b70f09b5" class="img-fluid">
+          <a href="#!">
+            <div class="mask"></div>
+          </a>
+        </div>
+        <div class="card-body text-center">
+          <h4 class="card-title"><strong>{{ 'CARD.NAME' | translate }}</strong></h4>
+          <h5 class="indigo-text"><strong>{{ 'CARD.TITLE' | translate }}</strong></h5>
+          <ul>
+            <li><i class="fa fa-language" aria-hidden="true"></i>
+              <select class="language" #langSelect (change)="translate.use(langSelect.value)">
+                <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+              </select>
+            </li>
+            <li><i class="fa fa-phone fa-2"> <a class="info "href="tel:+5492996739666">{{ 'CARD.PHONE' | translate }}</a></i></li>
+            <li><i class="fa fa-envelope fa-2"><a class="info" href="mailto:mceliz@enlaceit.com.ar"> {{ 'CARD.EMAIL' | translate }}</a></i></li>
+          </ul>
+          <a class="icons-sm li-ic" href="{{ 'CARD.LINKEDIN' | translate }}"><i class="fa fa-linkedin"> </i></a>
+          <a class="icons-sm gh-ic" href="{{ 'CARD.GITHUB' | translate }}"><i class="fa fa-github"> </i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

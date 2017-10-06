@@ -1,0 +1,14 @@
+<section id="experience">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2>{{ 'EXPERIENCE.TITLE' | translate }}</h2>
+        <div class="card card-body portfolio-car margin-top" *ngFor="let item of items">
+          <h6>{{ item.title }}</h6><p> {{item.start}} - {{item.end}}</p>
+          <h6>{{ item.job }}</h6>
+          <p class="lead">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
