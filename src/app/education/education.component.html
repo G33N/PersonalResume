@@ -4,10 +4,9 @@
       <div class="col-lg-8 mx-auto">
         <h2>{{ 'EDUCATION.TITLE' | translate }}</h2>
         <ul>
-          <li *ngFor="let item of items" class="card card-body portfolio-car"> <i class="fa fa-university fa-3 "> {{item.start}} - {{item.end}} </i>
-            <h6>{{item.institution}}</h6>
-            <p>{{item.title }}</p>
-
+          <li *ngFor="let item of education" class="card card-body portfolio-car"> <i class="fa fa-university fa-3 "> {{item.fields.startDate | date:'yyyy' }} - {{item.fields.endDate | date:'yyyy' }} </i>
+            <h6>{{item.fields.college}}</h6>
+            <p>{{item.fields.title}}</p>
           </li>
         </ul>
       </div>

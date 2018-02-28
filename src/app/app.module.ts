@@ -2,15 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-//bootstrap
+// bootstrap
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 // ngx-translate
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // http Module
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-// Firebase
-//FIREBASE
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+// FIREBASE
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FIREBASE_CONFIG } from './app.firebase.config';
@@ -21,6 +20,9 @@ import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+
+// Services
+import { ContentfulService } from './services/contentful.service';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -55,7 +57,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         // Import AngularFireAuthModule to use database interactions
         AngularFireDatabaseModule,
   ],
-  providers: [],
+  providers: [
+    ContentfulService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
