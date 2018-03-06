@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from '../services/contentful.service';
+import { Entry } from 'contentful';
 
 @Component({
   selector: 'app-skills',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
-  constructor() { }
+  skills: any;
+  constructor(private contentfulService: ContentfulService) { }
 
   ngOnInit() {
+    this.getSkills();
+  }
+
+  getSkills() {
+    this.contentfulService.getSkills()
+      .then(skills => {
+        this.skills = skills;
+      });
   }
 
 }

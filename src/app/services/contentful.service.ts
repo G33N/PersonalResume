@@ -15,7 +15,8 @@ const CONFIG = {
   contentTypeIds: {
     experience: 'experience',
     education: 'education',
-    portfolio: 'portfolio'
+    portfolio: 'portfolio',
+    skills: 'skills'
   }
 };
 
@@ -49,6 +50,13 @@ export class ContentfulService {
   getPortfolio(query?: object): Promise<contentful.Entry<any>[]> {
     return this.client.getEntries(Object.assign({
       content_type: CONFIG.contentTypeIds.portfolio
+    }, query))
+      .then(res => res.items);
+  }
+  // Get skills
+  getSkills(query?: object): Promise<contentful.Entry<any>[]> {
+    return this.client.getEntries(Object.assign({
+      content_type: CONFIG.contentTypeIds.skills
     }, query))
       .then(res => res.items);
   }

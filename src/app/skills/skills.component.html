@@ -2,40 +2,9 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 mx-auto">
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.nodejs.org/" rel="nofollow" target=“_blank”>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg" style="max-width:120px;width:100%;" alt="Powered by Nodejs"
-              />
-            </a>
-          </div>
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.angular.io/" rel="nofollow" target=“_blank”>
-              <img src="https://cdn.worldvectorlogo.com/logos/angular-icon-1.svg" style="max-width:80px;width:100%;"
-                alt="Powered by Angular" />
-            </a>
-          </div>
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.firebase.com/" rel="nofollow" target=“_blank”>
-              <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-built_white.svg"
-                style="max-width:120px;width:100%;" alt="Powered by Firebase" />
-            </a>
-          </div>
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.contentful.com/" rel="nofollow" target=“_blank”>
-              <img src="https://images.contentful.com/fo9twyrwpveg/44baP9Gtm8qE2Umm8CQwQk/c43325463d1cb5db2ef97fca0788ea55/PoweredByContentful_LightBackground.svg"
-                style="max-width:120px;width:100%;" alt="Powered by Contentful" />
-            </a>
-          </div>
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.ionicframework.com/" rel="nofollow" target=“_blank”>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Ionic_Logo.svg/1024px-Ionic_Logo.svg.png"
-                style="max-width:120px;width:100%;" alt="Powered by Ionic" />
-            </a>
-          </div>
-          <div class="col-lg-3 d-inline">
-            <a href="https://www.ionicframework.com/" rel="nofollow" target=“_blank”>
-              <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" style="max-width:120px;width:100%;"
-                alt="Powered by Ionic" />
+          <div class="col-lg-3 d-inline" *ngFor="let item of skills">
+            <a href="{{ item.fields.url }}" rel="nofollow" target=“_blank”>
+              <img src="{{ item.fields.logo.fields.file.url }}" style="max-width:120px;width:100%;"/>
             </a>
           </div>
         </div>
