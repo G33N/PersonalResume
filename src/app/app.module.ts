@@ -20,6 +20,7 @@ import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { SkillsComponent } from './skills/skills.component';
+import { OrderModule } from 'ngx-order-pipe'; // <- import OrderModule
 
 // Services
 import { ContentfulService } from './services/contentful.service';
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserModule,
     BsDropdownModule.forRoot(),
     HttpClientModule,
+    OrderModule,
     TranslateModule.forRoot({
           loader: {
             provide: TranslateLoader,

@@ -7,6 +7,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 import { ContentfulService } from '../services/contentful.service';
 import { Entry } from 'contentful';
 import { DatePipe } from '@angular/common';
+import { OrderPipe } from 'ngx-order-pipe';
+
 
 
 @Component({
@@ -18,7 +20,7 @@ export class ExperienceComponent implements OnInit {
 
 private experiences: Entry<any>[] = [];
 
-  constructor(public translate: TranslateService, private db: AngularFireDatabase, private contentfulService: ContentfulService ) {
+  constructor(public translate: TranslateService, private db: AngularFireDatabase, private contentfulService: ContentfulService, private orderPipe: OrderPipe ) {
     translate.addLangs(['en', 'es']);
         translate.setDefaultLang('en');
 
